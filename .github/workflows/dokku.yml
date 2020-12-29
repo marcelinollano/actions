@@ -2,10 +2,10 @@ name: Dokku
 on:
   push:
     branches:
-      - ${{ secrets.BRANCH_FROM }}
+      - main
 jobs:
   build:
-    runs-on: debian-stable
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: Dokku
