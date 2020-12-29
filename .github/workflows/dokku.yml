@@ -5,14 +5,14 @@ on:
       - main
 jobs:
   build:
-    runs-on: Ubuntu-20.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v1
       - name: Dokku
         uses: marcelinollano/actions/dokku@main
         env:
-          BRANCH_FROM: ${{ secrets.BRANCH_FROM }}
-          BRANCH_TO: ${{ secrets.BRANCH_TO }}
+          BRANCH_FROM: main
+          BRANCH_TO: main
           DOKKU_APP: ${{ secrets.DOKKU_APP }}
           DOKKU_HOST: ${{ secrets.DOKKU_HOST }}
           DOKKU_PORT: ${{ secrets.DOKKU_PORT }}
