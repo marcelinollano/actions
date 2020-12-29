@@ -2,7 +2,7 @@
 
 Favorite GitHub Actions.
 
-### Dokku
+## Dokku
 
 Deploys the code using `dokku`. How to setup:
 
