@@ -4,7 +4,7 @@ Favorite GitHub Actions.
 
 ## Dokku
 
-Deploys the code using `dokku`. How to setup:
+Deploys the code using `dokku`. How to install:
 
 1. Add the following secrets in `https://github.com/<user>/<repo>/settings/secrets`:
 
