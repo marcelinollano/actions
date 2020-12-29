@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Dokku
-        uses: marcelinollano/dokku-action/actions/dokku@main
+        uses: marcelinollano/actions/dokku@main
         env:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
