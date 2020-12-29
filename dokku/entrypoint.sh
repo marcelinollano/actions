@@ -1,5 +1,4 @@
 #!/bin/sh
-
 set -e
 
 SSH_PATH="$HOME/.ssh"
