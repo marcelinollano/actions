@@ -17,9 +17,7 @@ chmod 600 "$SSH_PATH/deploy_key.pub"
 
 eval $(ssh-agent)
 ssh-add "$SSH_PATH/deploy_key"
-
 ssh-keyscan -t rsa $HOST >> "$SSH_PATH/known_hosts"
-
 git checkout dokku
 
-GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push ssh://$USER@$HOST:$PORT/$APP $FROM:$TO
+GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push ssh://$DOKKU_USER@$DOKKU_HOST:$DOKKU_PORT/$DOKKU_APP $BRANCH_FROM:$BRANCH_TO

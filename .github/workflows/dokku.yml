@@ -13,9 +13,9 @@ jobs:
         env:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
-          USER: ${{ secrets.USER }}
-          HOST: ${{ secrets.HOST }}
-          APP: ${{ secrets.APP }}
-          PORT: ${{ secrets.PORT }}
+          USER: ${{ secrets.DOKKU_USER }}
+          HOST: ${{ secrets.DOKKU_HOST }}
+          APP: ${{ secrets.DOKKU_APP }}
+          PORT: ${{ secrets.DOKKU_PORT }}
           FROM: ${{ secrets.BRANCH_FROM }}
           TO: ${{ secrets.BRANCH_TO }}
