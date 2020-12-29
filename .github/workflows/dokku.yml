@@ -11,11 +11,11 @@ jobs:
       - name: Dokku
         uses: marcelinollano/actions/dokku@main
         env:
+          DOKKU_USER: ${{ secrets.DOKKU_USER }}
+          DOKKU_HOST: ${{ secrets.DOKKU_HOST }}
+          DOKKU_APP: ${{ secrets.DOKKU_APP }}
+          DOKKU_PORT: ${{ secrets.DOKKU_PORT }}
+          BRANCH_FROM: ${{ secrets.BRANCH_FROM }}
+          BRANCH_TO: ${{ secrets.BRANCH_TO }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
-          USER: ${{ secrets.DOKKU_USER }}
-          HOST: ${{ secrets.DOKKU_HOST }}
-          APP: ${{ secrets.DOKKU_APP }}
-          PORT: ${{ secrets.DOKKU_PORT }}
-          FROM: ${{ secrets.BRANCH_FROM }}
-          TO: ${{ secrets.BRANCH_TO }}
