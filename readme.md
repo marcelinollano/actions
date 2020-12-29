@@ -11,7 +11,7 @@ Deploys the code using `dokku`. How to install:
    - `DOKKU_APP`: Name of the app in `dokku`
    - `DOKKU_HOST`: IP host of your server
    - `DOKKU_PORT`: Port used by `ssh`, usually `22`
-   - `DOKKU_USER`: User on the server running `dokku`
+   - `DOKKU_USER`: Username to push to `dokku`
    - `PRIVATE_KEY`: User private key (no passphrase)
    - `PUBLIC_KEY`: User public key (no passphrase)
 
