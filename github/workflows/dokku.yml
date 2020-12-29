@@ -1,0 +1,21 @@
+name: Dokku
+on:
+  push:
+    branches:
+      - ${{ secrets.BRANCH_FROM }}
+jobs:
+  build:
+    runs-on: debian-stable
+    steps:
+      - uses: actions/checkout@v1
+      - name: Dokku
+        uses: marcelinollano/dokku-action/.github/actions/dokku@main
+        env:
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
+          USER: ${{ secrets.USER }}
+          HOST: ${{ secrets.HOST }}
+          APP: ${{ secrets.APP }}
+          PORT: ${{ secrets.PORT }}
+          FROM: ${{ secrets.BRANCH_FROM }}
+          TO: ${{ secrets.BRANCH_TO }}
